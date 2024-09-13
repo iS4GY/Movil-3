@@ -1,9 +1,12 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Reestablecer contraseña </ion-card-title>
+      <ion-card-title>Reestablecer contraseña</ion-card-title>
     </ion-card-header>
     <ion-card-content>
+      <ion-content>
+        <ion-input [value]="usuario" readonly></ion-input>
+      </ion-content>      
       <ion-label>Reestablecer contraseña</ion-label>
       <ion-button [routerLink]="['/reestablecer']">
         Enviar

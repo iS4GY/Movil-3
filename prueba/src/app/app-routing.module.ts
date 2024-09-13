@@ -11,7 +11,7 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  { path: 'enviado', loadChildren: () => import('./enviado/enviado.module').then(m => m.EnviadoPageModule) },
+  { path: 'enviado/:usuario', loadChildren: () => import('./enviado/enviado.module').then(m => m.EnviadoPageModule) },
   {
     path: 'reestablecer',
     loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)

@@ -5,7 +5,7 @@ import { EnviadoPage } from './enviado.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'usuario',
     component: EnviadoPage
   }
 ];

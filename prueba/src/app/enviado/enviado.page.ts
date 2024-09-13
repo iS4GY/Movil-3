@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-enviado',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./enviado.page.scss'],
 })
 export class EnviadoPage implements OnInit {
+  usuario: string = ''; 
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-  }
+    this.route.queryParams.subscribe(params =>{
+    this.usuario = params['usuario'];
+  });
+}
 
 }
