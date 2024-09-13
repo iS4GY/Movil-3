@@ -1,0 +1,17 @@
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-input [(ngModel)]="usuario" label="Ingrese usuario"></ion-input>
+        <br>
+        <ion-input label="Ingrese contrasena" [(ngModel)]= "contrasena" type="password"></ion-input>
+        <ion-button [routerLink]="['/enviado']" [disabled]="!correo || !contrasena">
+          Enviar
+        </ion-button>        
+      </ion-card-content>
+        <img src="https://cdn.pixabay.com/animation/2024/02/01/18/31/18-31-51-245_512.gif">
+    </ion-card>
+  </div>
