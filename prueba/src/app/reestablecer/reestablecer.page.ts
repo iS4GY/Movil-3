@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reestablecer',
   templateUrl: './reestablecer.page.html',
   styleUrls: ['./reestablecer.page.scss'],
 })
-export class ReestablecerPage implements OnInit {
+export class ReestablecerPage {
+  username: string = '';
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  goToLogin() {
+    // Navegar a la página de login
+    this.router.navigate(['/login']);
   }
-
 }

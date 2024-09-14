@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
-import { EnviadoPageRoutingModule } from './enviado-routing.module';
-import { EnviadoPage } from './enviado.page';
+import { LoginPageRoutingModule } from './login-routing.module';
+import { LoginPage } from './login.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnviadoPageRoutingModule
+    LoginPageRoutingModule
   ],
-  declarations: [EnviadoPage]
+  declarations: [LoginPage]
 })
-export class EnviadoPageModule {}
+export class LoginPageModule {}

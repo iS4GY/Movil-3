@@ -2,20 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  { path: 'enviado/:usuario', loadChildren: () => import('./enviado/enviado.module').then(m => m.EnviadoPageModule) },
-  {
-    path: 'reestablecer',
-    loadChildren: () => import('./reestablecer/reestablecer.module').then( m => m.ReestablecerPageModule)
-  },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule) },
+  { path: 'enviado', loadChildren: () => import('./enviado/enviado.module').then(m => m.EnviadoPageModule) },
+  { path: 'reestablecer', loadChildren: () => import('./reestablecer/reestablecer.module').then(m => m.ReestablecerPageModule) }
 ];
 
 @NgModule({

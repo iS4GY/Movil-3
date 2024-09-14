@@ -1,19 +1,26 @@
-  <div id="container">
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="form-container">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Login</ion-card-title>
+        <ion-card-title>Iniciar Sesión</ion-card-title>
       </ion-card-header>
-    
       <ion-card-content>
-        <form [formGroup]="form" (ngSubmit)="goToDetails()">
-          <ion-input formControlName="usuario" label="Ingrese usuario"></ion-input>
-          <br>
-          <ion-input formControlName="usuario" placeholder="Ingrese usuario" type="email"></ion-input>
-          <ion-button (click)="goToDetails()" [disabled]="!form.valid"> 
-            Enviar
-          </ion-button>     
-        </form>   
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input [(ngModel)]="username" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="password" required></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="login()">Enviar</ion-button>
       </ion-card-content>
-        <img src="https://cdn.pixabay.com/animation/2024/02/01/18/31/18-31-51-245_512.gif">
     </ion-card>
   </div>
+</ion-content>

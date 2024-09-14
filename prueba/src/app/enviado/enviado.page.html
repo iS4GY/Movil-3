@@ -1,17 +1,10 @@
-<ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Reestablecer contraseña</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-content>
-        <ion-input [value]="usuario" readonly></ion-input>
-      </ion-content>      
-      <ion-label>Reestablecer contraseña</ion-label>
-      <ion-button [routerLink]="['/reestablecer']">
-        Enviar
-      </ion-button>
-    </ion-card-content>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  </ion-card>
+<ion-content class="ion-padding">
+  <h1>¡Bienvenido!</h1>
+  <ion-button expand="block" (click)="goToReestablecer()">Restablecer contraseña</ion-button>
 </ion-content>
