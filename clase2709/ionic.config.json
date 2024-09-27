@@ -1,7 +1,5 @@
 {
   "name": "clase2709",
-  "integrations": {
-    "capacitor": {}
-  },
+  "integrations": {},
   "type": "angular"
 }
